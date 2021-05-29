@@ -1,7 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  * {
+* {
   margin: 0;
   padding: 0;
   font-family: AppleSDGothicNeo;
@@ -14,7 +11,7 @@ body {
   font-size: 16px;
 }
 
-#app {
+#root {
   width: 100vw;
   height: 100vh;
 }
@@ -28,7 +25,3 @@ body {
   font-family: "AppleSDGothicNeo";
   src: url("../font/AppleSDGothicNeo.ttf");
 }
-
-`;
-
-export default GlobalStyle;
