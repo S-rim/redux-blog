@@ -1,0 +1,33 @@
+@import "../../../assets/style/variables";
+
+.header {
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: #{$mainColor};
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 1rem;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+
+  p {
+    color: #{$text};
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #{$mainColor};
+      transition: 0.3s;
+    }
+  }
+}

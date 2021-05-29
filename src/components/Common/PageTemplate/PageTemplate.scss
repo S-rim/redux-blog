@@ -1,0 +1,25 @@
+@import "../../../assets/style/variables";
+
+.page-container {
+  height: 100%;
+  padding: 0 21rem;
+}
+
+.button {
+  box-shadow: 0px 3px 6px #00000016;
+  background-color: #{$mainColor};
+  width: 6rem;
+  border-radius: 1.5rem;
+  border: none;
+  height: 2.5rem;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
