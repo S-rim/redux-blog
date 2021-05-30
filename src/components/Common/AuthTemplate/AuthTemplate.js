@@ -1,5 +1,4 @@
 import React from "react";
-import "./AuthTemplate.scss";
 
 const AuthTemplate = ({ children }) => {
   return (

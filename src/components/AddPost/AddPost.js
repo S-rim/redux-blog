@@ -1,6 +1,5 @@
 import React from "react";
 import { PageTemplate } from "../Common";
-import "./AddPost.scss";
 
 const AddPost = () => {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 import { Header } from "..";
-import "./PageTemplate.scss";
 
 const PageTemplate = ({ children }) => {
   return (

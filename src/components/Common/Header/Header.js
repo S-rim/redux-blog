@@ -1,13 +1,21 @@
 import React from "react";
-import "./Header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header">
-      <h1>BLOG</h1>
+      <Link
+        to="post"
+        style={{
+          textDecoration: "none",
+        }}
+      >
+        <h1>BLOG</h1>
+      </Link>
+
       <nav className="nav">
         <Link
+          to="/post"
           style={{
             textDecoration: "none",
           }}

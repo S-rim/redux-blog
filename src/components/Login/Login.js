@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthTemplate from "../Common/AuthTemplate/AuthTemplate";
+import { AuthTemplate } from "../Common";
 
 const Login = () => {
   return (
