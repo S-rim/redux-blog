@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Login, SignUp, AddPost, MainPost } from "./containers";
+import { Login, SignUp, AddPost, MainPost, UpdatePost } from "./containers";
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
         <Route exact path="/sign-up" component={SignUp} />
         <Route exact path="/add-post" component={AddPost} />
         <Route exact path="/post" component={MainPost} />
+        <Route exact path="/edit" component={UpdatePost} />
       </Router>
     </>
   );
