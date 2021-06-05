@@ -45,6 +45,10 @@
     display: flex;
     font-weight: 600;
 
+    p {
+      cursor: pointer;
+    }
+
     &-button {
       color: #{$mainColor};
       margin-right: 0.7rem;
