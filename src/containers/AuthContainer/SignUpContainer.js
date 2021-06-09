@@ -11,12 +11,10 @@ const SignUpContainer = () => {
   const onSubmitRegister = () => {
     dispatch(registerUser(registerData))
       .then(() => {
-        console.log(registerData);
         alert("가입이 정상적으로 완료되었습니다");
       })
       .catch((err) => {
         console.log(err);
-        console.log(registerData);
       });
   };
 
