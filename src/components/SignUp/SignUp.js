@@ -2,20 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AuthTemplate } from "../Common";
 
-const SignUp = () => {
+const SignUp = ({ setRegisterData, onSubmitRegister }) => {
   return (
     <AuthTemplate>
       <form>
         <div>
           <p>아이디</p>
-          <input type="text" />
+          <input type="text" name="id" onChange={setRegisterData} />
         </div>
         <div>
           <p>비밀번호</p>
-          <input type="password" />
+          <input type="password" name="password" onChange={setRegisterData} />
         </div>
       </form>
-      <button type="submit">회원가입</button>
+      <button onClick={onSubmitRegister}>회원가입</button>
 
       <Link to="/">
         <p className="link">
