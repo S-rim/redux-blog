@@ -6,7 +6,7 @@ import { registerUser } from "../../store/modules/user/actions";
 
 const SignUpContainer = () => {
   const dispatch = useDispatch();
-  const [registerData, setRegisterData] = useChangeInput({ id: "", password: "" });
+  const [registerData, setRegisterData] = useChangeInput({ userId: "", password: "" });
 
   const onSubmitRegister = () => {
     dispatch(registerUser(registerData))

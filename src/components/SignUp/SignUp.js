@@ -8,11 +8,11 @@ const SignUp = ({ setRegisterData, onSubmitRegister }) => {
       <form>
         <div>
           <p>아이디</p>
-          <input type="text" name="id" onChange={setRegisterData} />
+          <input type="text" name="userId" onChange={setRegisterData} />
         </div>
         <div>
           <p>비밀번호</p>
-          <input type="password" name="password" onChange={setRegisterData} />
+          <input type="password" name="password" onChange={setRegisterData} autoComplete="current-password" />
         </div>
       </form>
       <button onClick={onSubmitRegister}>회원가입</button>
