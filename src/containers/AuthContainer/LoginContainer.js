@@ -11,7 +11,8 @@ const LoginContainer = () => {
 
   const onSubmitLogin = () => {
     dispatch(loginUser(loginData))
-      .then(() => {
+      .then((res) => {
+        localStorage.setItem("accessToken", res.payload.data.data.token);
         SuccessToast("로그인이 정상적으로 완료되었습니다.");
       })
       .catch((err) => {
