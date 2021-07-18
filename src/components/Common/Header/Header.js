@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const history = useHistory();
+  console.log(location.pathname);
   return (
     <header className="header">
       <Link
-        to="post"
+        to="/post"
         style={{
           textDecoration: "none",
         }}
@@ -15,14 +18,22 @@ const Header = () => {
 
       <nav className="nav">
         <Link
-          to="/post"
+          to={location.pathname === "/post" ? "/add-post" : "/post"}
           style={{
             textDecoration: "none",
           }}
         >
-          <p>글 목록</p>
+          <p>{location.pathname === "/post" ? "글 쓰기" : "글 목록"}</p>
         </Link>
-        <button className="button">로그아웃</button>
+        <button
+          className="button"
+          onClick={() => {
+            localStorage.removeItem("accessToken");
+            history.push("/");
+          }}
+        >
+          로그아웃
+        </button>
       </nav>
     </header>
   );
