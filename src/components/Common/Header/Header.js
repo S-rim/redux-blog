@@ -4,7 +4,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
   const history = useHistory();
-  console.log(location.pathname);
+
   return (
     <header className="header">
       <Link
