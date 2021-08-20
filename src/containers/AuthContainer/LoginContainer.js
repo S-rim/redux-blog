@@ -4,9 +4,11 @@ import useChangeInput from "../../lib/hooks/useChangeInputs";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../store/modules/user/actions";
 import { SuccessToast, ErrorToast } from "../../lib/toast";
+import { useHistory } from "react-router-dom";
 
 const LoginContainer = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [loginData, setLoginData] = useChangeInput({ userId: "", password: "" });
 
   const onSubmitLogin = () => {
@@ -14,6 +16,7 @@ const LoginContainer = () => {
       .then((res) => {
         localStorage.setItem("accessToken", res.payload.data.data.token);
         SuccessToast("로그인이 정상적으로 완료되었습니다.");
+        history.push("/post");
       })
       .catch((err) => {
         switch (err.response.status) {
