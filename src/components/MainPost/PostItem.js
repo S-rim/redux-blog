@@ -6,8 +6,11 @@ const PostItem = ({ post, deletePost }) => {
 
   return (
     <article className="post-item">
-      <h1>{title}</h1>
-      <p className="post-content">{content}</p>
+      <Link to={`/post/${id}`} style={{ textDecoration: "none" }}>
+        <h1>{title}</h1>
+        <p className="post-content">{content}</p>
+      </Link>
+
       <div className="post-info">
         <p className="post-info-date">2020-05-29</p>
         <div className="post-update">
