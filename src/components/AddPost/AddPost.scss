@@ -33,4 +33,14 @@
     width: 7rem;
     float: right;
   }
+
+  &-date {
+    color: #{$text};
+    margin: 2rem 0 4rem 0;
+    font-size: 0.9rem;
+  }
+
+  &-content {
+    color: #{$mainText};
+  }
 }
